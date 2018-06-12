@@ -2,6 +2,10 @@
  * Custom CSS styles go here.
  */
 
+div.math {
+    color: #cacaca;
+}
+
 img {
   display: block;
   margin-right: auto;
