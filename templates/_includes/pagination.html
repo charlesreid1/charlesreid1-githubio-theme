@@ -2,13 +2,23 @@
     <div class="col-md-4 col-centered" style="text-align: center;">
 
         <div class="pagination">
+
+          {% if articles_page.has_previous() %}
+            <a class="next" href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr; Newer</a>
+          {% endif %}
+
+          {% if articles_page.has_previous() and articles_page.has_next() %}
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+          {% endif %}
+
           {% if articles_page.has_next() %}
-            <a class="prev" href="{{ SITEURL }}/{{ articles_next_page.url }}">&larr; Older</a>
+            <a class="prev" href="{{ SITEURL }}/{{ articles_next_page.url }}">Older &rarr;</a>
           {% endif %}
         
-          {% if articles_page.has_previous() %}
-            <a class="next" href="{{ SITEURL }}/{{ articles_previous_page.url }}">Newer &rarr;</a>
-          {% endif %}
           <br />
         </div>
 
