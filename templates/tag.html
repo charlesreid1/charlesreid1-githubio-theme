@@ -19,9 +19,16 @@
     <div>
 
         {% if articles %}
+
+            {% for article in articles %}
+                {% include '_includes/short_article.html' %}
+            {% endfor %}
+
+            {#
             {% for article in articles_page.object_list %}
                 {% include '_includes/short_article.html' %}
             {% endfor %}
+            #}
         {% endif %}
 
     </div>
